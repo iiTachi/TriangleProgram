@@ -9,11 +9,11 @@ package main.cn.tju.scsst;
  * take out a given number (x) yuan.
  */
 public class TriangleProgram {
-	int[] triangle = {50, 20, 5, 5, 1, 1, 1};
-	Boolean[] accessible = new Boolean[sumOfTriangle(triangle) + 1];
+	private int[] triangle = {50, 20, 5, 5, 1, 1, 1};
+	private Boolean[] accessible = new Boolean[sumOfTriangle(triangle) + 1];
 	
 	//Init the accessible array 
-	void initAccessable() {
+	private void initAccessable() {
 		for(int i = 0; i < accessible.length; i++) {
 			accessible[i] = false;
 		}
@@ -21,7 +21,7 @@ public class TriangleProgram {
 	}
 	
 	// Calculate the sum of the triangle array
-	int sumOfTriangle(int[] triangle) {
+	private int sumOfTriangle(int[] triangle) {
 		int sum = 0;
 		for(int i = 0; i < triangle.length; i++) {
 			sum += triangle[i];
@@ -30,7 +30,7 @@ public class TriangleProgram {
 	}
 	
 	//Judge if the given money is valid
-	Boolean isValid(int money) {
+	private Boolean isValid(int money) {
 		if(money > sumOfTriangle(triangle) || money < 0) {
 			return false;
 		}else {

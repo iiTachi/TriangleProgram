@@ -12,9 +12,9 @@ import main.cn.tju.scsst.TriangleProgram;
 
 @RunWith(Parameterized.class)
 public class TestTriangle {
-	int money;
-	Boolean expected;
-	TriangleProgram triangleProgram = null;
+	private int money;
+	private Boolean expected;
+	private TriangleProgram triangleProgram = null;
 	
 	public TestTriangle(int money, Boolean expected){
 		this.money = money;
